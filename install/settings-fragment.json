@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "knowledge-base": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "{{REPO_PATH}}/mcp-servers/knowledge-base",
+        "fastmcp",
+        "run",
+        "src/knowledge_base/server.py"
+      ],
+      "env": {}
+    },
+    "code-tools": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "{{REPO_PATH}}/mcp-servers/code-tools",
+        "fastmcp",
+        "run",
+        "src/code_tools/server.py"
+      ],
+      "env": {}
+    }
+  }
+}
