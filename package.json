@@ -1,0 +1,17 @@
+{
+  "name": "claude-central",
+  "private": true,
+  "workspaces": [
+    "infra"
+  ],
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "infra:synth": "pnpm --filter infra cdk synth",
+    "infra:deploy": "pnpm --filter infra cdk deploy",
+    "infra:diff": "pnpm --filter infra cdk diff"
+  }
+}

@@ -1,0 +1,30 @@
+[tool.uv.workspace]
+members = [
+    "mcp-servers/knowledge-base",
+    "mcp-servers/code-tools",
+    "agents/orchestrator",
+    "workflows",
+    "evals",
+    "mlops",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+select = ["E", "F", "I", "N", "UP", "ANN", "ASYNC", "B", "C4", "PTH", "RUF"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+    "integration: marks tests requiring external services",
+    "eval: marks LLM quality eval tests",
+    "slow: marks slow tests",
+]

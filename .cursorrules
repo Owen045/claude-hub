@@ -1,0 +1,37 @@
+# Claude Central — Cursor Rules
+# Mirror of key rules from CLAUDE.md for Cursor users.
+
+## Core Principles
+- Correctness first: tests before or alongside implementation.
+- Explicit over implicit: type annotations everywhere, no `Any` without comment.
+- Fail loudly: raise specific exceptions, never swallow errors silently.
+- Idempotency: all infrastructure and data pipeline operations must be idempotent.
+- Observability: every non-trivial operation logs structured JSON to stdout.
+- Security: secrets via env vars or AWS Secrets Manager only — never hardcode.
+
+## Python
+- Python 3.12+. Use `uv` for packages.
+- Ruff for lint + format. Pyright strict for types.
+- Pytest. Min 80% coverage on new code.
+- Pydantic v2 for all data models. `structlog` for logging.
+- `asyncio` for I/O-bound work; `anyio` for library code.
+
+## TypeScript
+- Strict mode always. ESLint + Prettier enforced.
+- Zod for runtime validation. Vitest for tests.
+
+## AWS
+- Tag all resources: Project, Environment, Owner, CostCentre.
+- IAM least privilege. No wildcard resource ARNs in prod.
+- CDK for all infra. No console clicks in prod.
+
+## Git
+- Branches: feat/, fix/, chore/, eval/ prefixes.
+- Conventional Commits: `feat(mcp): add retrieval tool`.
+
+## MCP Servers
+- Use `fastmcp` always.
+- Every tool needs a docstring (= LLM tool description), benchmark, and ≥5 eval cases.
+
+## Skills
+- Before starting any task, check `skills/` for a matching SKILL.md and read it.

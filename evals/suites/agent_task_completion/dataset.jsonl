@@ -1,0 +1,5 @@
+{"id": "atc-001", "input": {"task": "Write a Python function to validate an email address using regex."}, "expected": {"contains_code": true, "language": "python", "has_function": true}, "metadata": {"difficulty": "easy"}}
+{"id": "atc-002", "input": {"task": "Research and explain the CAP theorem."}, "expected": {"topic": "CAP theorem", "keywords": ["consistency", "availability", "partition"]}, "metadata": {"difficulty": "medium"}}
+{"id": "atc-003", "input": {"task": "Create a Pydantic v2 model for a user with name, email, and age fields."}, "expected": {"contains_code": true, "language": "python", "uses_pydantic": true}, "metadata": {"difficulty": "easy"}}
+{"id": "atc-004", "input": {"task": "Explain why Temporal workflows must be deterministic."}, "expected": {"topic": "Temporal determinism", "keywords": ["replay", "history", "non-deterministic"]}, "metadata": {"difficulty": "medium"}}
+{"id": "atc-005", "input": {"task": "Design an API endpoint for searching a knowledge base."}, "expected": {"contains_design": true, "mentions_pagination": true}, "metadata": {"difficulty": "hard"}}
